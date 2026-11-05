@@ -3,12 +3,12 @@
 #include <juce_dsp/juce_dsp.h>
 #include <atomic>
 
-#include "dsp/MasterEQ.h"
-#include "dsp/MultibandComp.h"
-#include "dsp/Exciter.h"
-#include "dsp/Imager.h"
-#include "dsp/Maximizer.h"
-#include "dsp/LoudnessMeter.h"
+#include "MasterEQ.h"
+#include "MultibandComp.h"
+#include "Exciter.h"
+#include "Imager.h"
+#include "Maximizer.h"
+#include "LoudnessMeter.h"
 
 // Lock-free FIFO that carries the mono output signal to the spectrum analyser.
 struct SpectrumFifo

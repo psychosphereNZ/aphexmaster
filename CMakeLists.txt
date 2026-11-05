@@ -39,8 +39,8 @@ juce_add_plugin(ApexMaster
     COPY_PLUGIN_AFTER_BUILD FALSE)
 
 set(APEX_SOURCES
-    Source/PluginProcessor.cpp
-    Source/PluginEditor.cpp)
+    PluginProcessor.cpp
+    PluginEditor.cpp)
 
 target_sources(ApexMaster PRIVATE ${APEX_SOURCES})
 
@@ -61,7 +61,7 @@ target_link_libraries(ApexMaster
 
 if(APEX_BUILD_TESTS)
     juce_add_console_app(ApexMasterTest PRODUCT_NAME "ApexMasterTest")
-    target_sources(ApexMasterTest PRIVATE Tests/TestMain.cpp ${APEX_SOURCES})
+    target_sources(ApexMasterTest PRIVATE TestMain.cpp ${APEX_SOURCES})
     target_compile_definitions(ApexMasterTest PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
     target_link_libraries(ApexMasterTest PRIVATE
         juce::juce_audio_utils juce::juce_dsp

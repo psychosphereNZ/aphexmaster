@@ -1,7 +1,7 @@
 // Offline test: renders a synthetic techno loop through every preset, checks ceiling/NaN/latency,
 // and saves GUI screenshots of every page.
-#include "../Source/PluginProcessor.h"
-#include "../Source/PluginEditor.h"
+#include "PluginProcessor.h"
+#include "PluginEditor.h"
 #include <cstdio>
 
 int main (int argc, char** argv)
